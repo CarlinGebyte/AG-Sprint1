@@ -2,9 +2,7 @@ export const showPopular = async (array, cardContainer) => {
   const offers = await array;
   offers.forEach((element) => {
     const { id, name, price, img, offer, quantity } = element;
-    console.log(offer != undefined);
     if (offer === undefined) {
-      console.log("hola");
       cardContainer.innerHTML += `
         <div class="card">
                     <img src="${img}" class="card-img-top"

@@ -19,7 +19,7 @@ export const showPopular = async (array, cardContainer) => {
       let cost = price - price * (offer / 100);
       cardContainer.innerHTML += `
         <div class="card">
-                    <p class="card-text">${offer}% dto.</p>
+                    <p class="card-offer">${offer}% dto.</p>
                     <img src="${img}" class="card-img-top"
                         alt="offer" />
                     <div class="card-body">

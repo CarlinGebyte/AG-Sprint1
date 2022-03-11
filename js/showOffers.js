@@ -3,9 +3,10 @@ export const showOffers = async (array, cardContainer) => {
   offers.forEach((element) => {
     const { id, name, price, img, offer } = element;
     let cost = price - price * (offer / 100);
+    cost = cost.toFixed(1);
     cardContainer.innerHTML += `
         <div class="card">
-                    <p class="card-text">${offer}% dto.</p>
+                    <p class="card-offer">${offer}% dto.</p>
                     <img src="${img}" class="card-img-top"
                         alt="offer" />
                     <div class="card-body">

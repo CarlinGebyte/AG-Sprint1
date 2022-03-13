@@ -11,7 +11,7 @@ export const showPopular = async (array, cardContainer) => {
                         <h5 class="card-title" value="${id}">${price}</h5>
                         <p class="card-text" value="${id}">${name}</p>
                         <p class="card-text" value="${id}">${quantity}</p>
-                        <a href="#!" id="${id}" value="${id}" class="btn btn-primary">Agregar</a>
+                        <a href="#!" id="${id}" value="${id}" class="btn btn-success">Agregar</a>
                     </div>
                 </div>
         `;
@@ -26,7 +26,7 @@ export const showPopular = async (array, cardContainer) => {
                         <h5 class="card-title" value="${id}">$${cost}/kg <span>$${price}</span></h5>
                         <p class="card-text" value="${id}">${name}</p>
                         <p class="card-text" value="${id}">${quantity}</p>
-                        <a href="#!" id="${id}" class="btn btn-primary" value="${id}">Agregar</a>
+                        <a href="#!" id="${id}" class="btn btn-success" value="${id}">Agregar</a>
                     </div>
                 </div>
         `;

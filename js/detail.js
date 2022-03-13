@@ -2,7 +2,7 @@ import getProducts from "./getProducts.js";
 import { showOffers } from "./showOffers.js";
 
 const detailProduct = async (product, url) => {
-  const { img, name, price, offer } = product;
+  const { id, img, name, price, offer } = product;
   let productContainer = document.getElementById("product-detail");
   let imageContainer = document.getElementById("img-detail");
   let cost;
@@ -30,10 +30,20 @@ const detailProduct = async (product, url) => {
         <option value="de 3 a 5 días">3 a 5 días</option>
         <option value="7 días">7 días</option>
     </select>
+    <div id="action-detail">
+        <div id="quantity-product">
+            <div id="reduce-quantity"><span>&#8722;</span></div>
+            <div id="quantity">1</div>
+            <div id="add-quantity"><span>&#x2B</span></div>
+        </div>
+        <div id="add-detail">
+            <button class="btn btn-success" value="${id}" id="add-product-detail">Agregar</button>
+        </div>
+    </div>
   `;
   const offers = await getProducts(url);
   const offerContainer = document.getElementById("related-container");
-  offerContainer.innerHTML = ""; 
+  offerContainer.innerHTML = "";
   showOffers(offers, offerContainer);
 };
 

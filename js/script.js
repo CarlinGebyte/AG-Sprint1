@@ -10,8 +10,9 @@ const modalDetail = document.getElementById("modal-detail-bg");
 const cart = document.getElementById("cart-button");
 const modalCart = document.getElementById("modal-cart");
 const closeCart = document.getElementById("close-cart");
+const addProductsN = document.getElementById("add-products-n");
 
-const endpoint = "http://localhost:4000/";
+const endpoint = "https://ag-sprint1.herokuapp.com/";
 
 document.addEventListener("DOMContentLoaded", () => {
   const offers = getProducts(`${endpoint}Offers`);
@@ -46,9 +47,14 @@ popularContainer.addEventListener("click", async (e) => {
   await detailProduct(popular, `${endpoint}Offers`);
 });
 
+// CART
+
+const hideCart = () => {
+  modalCart.style.display = "none";
+};
+
 cart.addEventListener("click", () => {
   modalCart.style.display = "block";
 });
-closeCart.addEventListener("click", () => {
-  modalCart.style.display = "none";
-});
+closeCart.addEventListener("click", hideCart);
+addProductsN.addEventListener("click", hideCart);

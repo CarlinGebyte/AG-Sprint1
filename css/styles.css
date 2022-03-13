@@ -28,6 +28,8 @@ body {
   padding: 2em;
   border-radius: 1em;
   height: 80%;
+  width: 82%;
+  margin: 3% auto;
 }
 .modal-detail-bg .container-detail #close-detail {
   position: relative;
@@ -49,13 +51,43 @@ body {
 .modal-detail-bg .container-detail #body-detail #product-detail {
   width: 50%;
 }
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail {
+  margin-top: 2%;
+  display: flex;
+}
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product {
+  display: flex;
+  width: 30%;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity {
+  width: 25%;
+}
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail {
+  width: 60%;
+  text-align: right;
+}
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail {
+  width: 90%;
+}
 .modal-detail-bg .container-cart {
   position: absolute;
   display: flex;
   right: 0;
   top: 0;
   height: 100%;
-  width: 34%;
+  width: 40%;
   background-color: #fff;
   padding: 1em;
   flex-direction: column;
@@ -88,6 +120,10 @@ body {
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
+}
+.modal-detail-bg .container-cart #no-products {
+  margin: 30% auto;
+  text-align: center;
 }
 
 .container {

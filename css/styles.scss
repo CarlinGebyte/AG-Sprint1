@@ -25,6 +25,8 @@ body {
     padding: 2em;
     border-radius: 1em;
     height: 80%;
+    width: 82%;
+    margin: 3% auto;
     #close-detail {
       position: relative;
       left: 98%;
@@ -43,6 +45,29 @@ body {
       #img-detail,
       #product-detail {
         width: 50%;
+        #action-detail {
+          margin-top: 2%;
+          display: flex;
+          #quantity-product {
+            display: flex;
+            width: 30%;
+            font-size: 1.5em;
+            font-weight: 600;
+            text-align: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            #add-quantity, #quantity, #reduce-quantity{
+              width: 25%;
+            }
+          }
+          #add-detail {
+            width: 60%;
+            text-align: right;
+            #add-product-detail {
+              width: 90%;
+            }
+          }
+        }
       }
     }
   }
@@ -52,7 +77,7 @@ body {
     right: 0;
     top: 0;
     height: 100%;
-    width: 34%;
+    width: 40%;
     background-color: #fff;
     padding: 1em;
     flex-direction: column;
@@ -84,6 +109,10 @@ body {
       border-radius: 50%;
       color: #fff;
       cursor: pointer;
+    }
+    #no-products {
+      margin: 30% auto;
+      text-align: center;
     }
   }
 }

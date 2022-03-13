@@ -12,7 +12,7 @@ export const showOffers = async (array, cardContainer) => {
             <div class="card-body" value="${id}">
                 <h5 class="card-title" value="${id}">$${cost}/kg <span>$${price}</span></h5>
                 <p class="card-text" value="${id}">${name}</p>
-                <a href="#!" value="${id}" class="btn btn-primary">Agregar</a>
+                <a href="#!" value="${id}" class="btn btn-success">Agregar</a>
             </div>
         </div>
         `;

@@ -36,8 +36,8 @@
                     <h5><img src="img/location-orange.png" alt=""> <span>Ubicación</span></h5>
                 </div>
                 <div id="cart">
-                    <h5><button class="btn btn-success"><span><img src="img/cart-white.png" alt="cart"></span></button>
-                    </h5>
+                    <button class="btn btn-success" id="cart-button"><span><img src="img/cart-white.png" id="cart-icon"
+                                alt="cart"></span></button>
                 </div>
             </div>
 
@@ -83,6 +83,76 @@
                 </div>
             </div>
         </div>
+
+        <!-- MODAL CART -->
+
+        <div class="modal-detail-bg" id="modal-cart">
+            <div class="container-cart">
+                <div id="cart-header">
+                    <div id="location-cart">
+                        <p>Entregar en:
+                        <h5> Ubicación</h5>
+                        </p>
+                    </div>
+                    <div id="close-cart">
+                        <span>&#10006</span>
+                    </div>
+                </div>
+                <div id="products-cart">
+                    <img src="" alt="">
+                    <h3>Tu canasta está vacía</h3>
+                    <button class="btn btn-success">Agregar productos</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL CART -->
+
+        <!-- MODAL DETAILS -->
+
+        <div class="modal-detail-bg" id="modal-detail-bg">
+            <div class="container-detail">
+                <div id="close-detail">
+                    <span>&#10006</span>
+                </div>
+                <div id="body-detail">
+                    <div id="img-detail">
+                        <img src="" alt="product">
+                    </div>
+                    <div id="product-detail">
+                        <h3>Product Name</h3>
+                        <p>Price</p>
+                        <span>Precios con IVA incluido</span>
+                        <p>El peso puede variar de acuerdo al peso real</p>
+                        <h4>Seleccione el intérvalo de días</h4>
+                        <select name="interval" class="form-control select-input" id="interval">
+                            <option value="" selected hidden>Seleccionar</option>
+                            <option value="hoy">Para hoy</option>
+                            <option value="de 3 a 5 días">3 a 5 días</option>
+                            <option value="7 días">7 días</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="related">
+                    <h5>Productos relacionados</h5>
+                    <div class="products-container" id="related-container">
+                        <div class="card">
+                            <img src="" class="card-img-top" alt="img" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's
+                                    content.</p>
+                                <a href="#!" class="btn btn-primary">Button</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END MODAL DETAILS -->
     </main>
 
     <script src="./js/script.js" type="module"></script>

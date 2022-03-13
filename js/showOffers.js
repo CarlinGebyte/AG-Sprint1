@@ -5,16 +5,16 @@ export const showOffers = async (array, cardContainer) => {
     let cost = price - price * (offer / 100);
     cost = cost.toFixed(1);
     cardContainer.innerHTML += `
-        <div class="card">
-                    <p class="card-offer">${offer}% dto.</p>
-                    <img src="${img}" class="card-img-top"
-                        alt="offer" />
-                    <div class="card-body">
-                        <h5 class="card-title">$${cost}/kg <span>$${price}</span></h5>
-                        <p class="card-text">${name}</p>
-                        <a href="#!" id="${id}" class="btn btn-primary">Agregar</a>
-                    </div>
-                </div>
+        <div class="card" value="${id}">
+            <p class="card-offer" value="${id}">${offer}% dto.</p>
+            <img src="${img}" value="${id}" class="card-img-top"
+                alt="offer" />
+            <div class="card-body" value="${id}">
+                <h5 class="card-title" value="${id}">$${cost}/kg <span>$${price}</span></h5>
+                <p class="card-text" value="${id}">${name}</p>
+                <a href="#!" value="${id}" class="btn btn-primary">Agregar</a>
+            </div>
+        </div>
         `;
   });
 };

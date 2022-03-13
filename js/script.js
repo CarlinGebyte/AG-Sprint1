@@ -11,8 +11,6 @@ const cart = document.getElementById("cart-button");
 const modalCart = document.getElementById("modal-cart");
 const closeCart = document.getElementById("close-cart");
 const addProductsN = document.getElementById("add-products-n");
-const reduceQuantity = document.getElementById("reduce-quantity-btn");
-const addQuantity = document.getElementById("add-quantity-btn");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -27,6 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PRODUCT DETAIL
 
+const addQuantity = (quantityContainer) => {
+  
+};
+
 closeDetail.addEventListener("click", () => {
   modalDetail.style.display = "none";
 });
@@ -36,26 +38,40 @@ offerContainer.addEventListener("click", async (e) => {
   let id = e.target.getAttribute("value");
   let offer = await getProducts(`${endpoint}Offers/${id}`);
   await detailProduct(offer, `${endpoint}Offers`);
+  const reduce = document.getElementById("reduce-quantity-btn");
+  const add = document.getElementById("add-quantity-btn");
+  reduce.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity");
+    if (quantity.innerHTML != "0") {
+      quantity.innerHTML = Number(quantity.innerHTML) - 1;
+    } else {
+      quantity.innerHTML = 0;
+    }
+  });
+  add.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity");
+    quantity.innerHTML = Number(quantity.innerHTML) + 1;
+  });
 });
 popularContainer.addEventListener("click", async (e) => {
   modalDetail.style.display = "block";
   let id = e.target.getAttribute("value");
   let popular = await getProducts(`${endpoint}Popular/${id}`);
   await detailProduct(popular, `${endpoint}Offers`);
-});
-
-reduceQuantity.addEventListener("click", () => {
-  let quantity = document.getElementById("quantity");
-  if (quantity.innerHTML != "0") {
-    quantity.innerHTML = Number(quantity.innerHTML) - 1;
-  } else {
-    quantity.innerHTML = 0;
-  }
-});
-addQuantity.addEventListener("click", () => {
-  let quantity = document.getElementById("quantity");
+  const reduce = document.getElementById("reduce-quantity-btn");
+  const add = document.getElementById("add-quantity-btn");
+  reduce.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity");
+    if (quantity.innerHTML != "0") {
+      quantity.innerHTML = Number(quantity.innerHTML) - 1;
+    } else {
+      quantity.innerHTML = 0;
+    }
+  });
+  add.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity");
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
-
+  });
 });
 
 // END PRODUCT DETAIL

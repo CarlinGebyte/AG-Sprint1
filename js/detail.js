@@ -11,7 +11,6 @@ const detailProduct = async (product, url) => {
     cost = cost.toFixed(1);
   }
   !isNaN(cost) ? (cost = `$${cost} /kg`) : (cost = price);
-  console.log(cost);
   imageContainer.innerHTML = "";
   imageContainer.innerHTML = `
     <img src="${img}" alt="product">

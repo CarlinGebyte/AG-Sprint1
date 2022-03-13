@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 
-.modal-detail-bg {
+.modal-detail-bg, .modal-cart-bg {
   background-color: #00000059;
   position: absolute;
   left: 0;
@@ -22,7 +22,7 @@ body {
   height: 100%;
   display: none;
 }
-.modal-detail-bg .container-detail {
+.modal-detail-bg .container-detail, .modal-cart-bg .container-detail {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ body {
   width: 82%;
   margin: 3% auto;
 }
-.modal-detail-bg .container-detail #close-detail {
+.modal-detail-bg .container-detail #close-detail, .modal-cart-bg .container-detail #close-detail {
   position: relative;
   left: 98%;
   padding: 0 0 0 8px;
@@ -45,20 +45,23 @@ body {
   height: 1.5em;
   cursor: pointer;
 }
-.modal-detail-bg .container-detail #body-detail {
+.modal-detail-bg .container-detail #body-detail, .modal-cart-bg .container-detail #body-detail {
   display: flex;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail {
+.modal-detail-bg .container-detail #body-detail #product-detail, .modal-cart-bg .container-detail #body-detail #img-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail {
   width: 50%;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail {
   margin-top: 2%;
   display: flex;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product {
   display: flex;
   width: 30%;
   font-size: 1.5em;
@@ -67,31 +70,56 @@ body {
   justify-content: space-between;
   margin: 0 auto;
 }
-.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity {
   width: 25%;
 }
-.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #add-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn {
   cursor: pointer;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail {
   width: 60%;
   text-align: right;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail {
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail {
   width: 90%;
 }
-.modal-detail-bg .container-cart {
+.modal-detail-bg .container-cart, .modal-cart-bg .container-cart {
   position: absolute;
   display: flex;
   right: 0;
@@ -102,26 +130,29 @@ body {
   padding: 1em;
   flex-direction: column;
 }
-.modal-detail-bg .container-cart #cart-header {
+.modal-detail-bg .container-cart #cart-header, .modal-cart-bg .container-cart #cart-header {
   position: relative;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5em;
 }
-.modal-detail-bg .container-cart #location-cart {
+.modal-detail-bg .container-cart #location-cart, .modal-cart-bg .container-cart #location-cart {
   position: relative;
   display: flex;
   width: 80%;
   align-items: center;
 }
-.modal-detail-bg .container-cart #location-cart p, .modal-detail-bg .container-cart #location-cart h5 {
+.modal-detail-bg .container-cart #location-cart p,
+.modal-detail-bg .container-cart #location-cart h5, .modal-cart-bg .container-cart #location-cart p,
+.modal-cart-bg .container-cart #location-cart h5 {
   margin: 0;
 }
-.modal-detail-bg .container-cart #location-cart h5 {
+.modal-detail-bg .container-cart #location-cart h5, .modal-cart-bg .container-cart #location-cart h5 {
   margin-left: 4px;
 }
-.modal-detail-bg .container-cart #close-cart {
+.modal-detail-bg .container-cart #close-cart, .modal-cart-bg .container-cart #close-cart {
   position: relative;
   width: 1.5em;
   height: 1.5em;
@@ -131,9 +162,79 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.modal-detail-bg .container-cart #no-products {
+.modal-detail-bg .container-cart #no-products, .modal-cart-bg .container-cart #no-products {
   margin: 30% auto;
   text-align: center;
+}
+.modal-detail-bg .container-cart #cart-products .product:first-child, .modal-cart-bg .container-cart #cart-products .product:first-child {
+  border-top: 1px solid #ccc;
+}
+.modal-detail-bg .container-cart #cart-products .product, .modal-cart-bg .container-cart #cart-products .product {
+  padding: 1em 0;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+.modal-detail-bg .container-cart #cart-products .product .product-cart-text, .modal-cart-bg .container-cart #cart-products .product .product-cart-text {
+  width: 53%;
+}
+.modal-detail-bg .container-cart #cart-products .product .image-cart-product, .modal-cart-bg .container-cart #cart-products .product .image-cart-product {
+  width: 25%;
+}
+.modal-detail-bg .container-cart #cart-products .product .image-cart-product img, .modal-cart-bg .container-cart #cart-products .product .image-cart-product img {
+  width: 100%;
+}
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity {
+  display: flex;
+  width: 20%;
+  margin-top: 0.3em;
+}
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container {
+  background-color: #fff;
+  border-radius: 0.5em;
+  height: 7vh;
+  align-items: center;
+  padding: 1em;
+  box-shadow: -3px 2px 26px 3px rgba(0, 0, 0, 0.068);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity, .modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity {
+  font-size: 1.5em;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end, .modal-cart-bg .container-cart #cart-products #cart-actions-end {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart {
+  width: 55%;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart p, .modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart p {
+  margin: 0;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart {
+  width: 45%;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn {
+  width: 100%;
+  display: flex;
+  padding: 0.6em;
+  border-radius: 0.5em;
+  justify-content: space-between;
+  font-size: 1em;
+  font-weight: 800;
+  text-transform: initial;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal {
+  width: 1.5em;
+  background-color: #2E7E78;
+  border-radius: 0.3em;
+}
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart {
+  width: 35;
 }
 
 .container {
@@ -227,6 +328,12 @@ body {
 #related .products-container .card .card-img-top {
   width: 80%;
   margin: auto;
+}
+#offers .products-container .card .card-body,
+#popular .products-container .card .card-body,
+#related .products-container .card .card-body {
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 1000px) {
   #offers .products-container .card,

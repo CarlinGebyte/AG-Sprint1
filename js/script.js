@@ -2,6 +2,9 @@ import getProducts from "./getProducts.js";
 import { showOffers } from "./showOffers.js";
 import { showPopular } from "./showPopular.js";
 import detailProduct from "./detail.js";
+import offerToCart from "./cart.js";
+import { popularToCart } from "./cart.js";
+import { showProductsCart } from "./cart.js";
 
 const offerContainer = document.getElementById("offers-container");
 const popularContainer = document.getElementById("popular-container");
@@ -25,9 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PRODUCT DETAIL
 
-const addQuantity = (quantityContainer) => {
-  
-};
+const addQuantity = (quantityContainer) => {};
 
 closeDetail.addEventListener("click", () => {
   modalDetail.style.display = "none";
@@ -42,15 +43,21 @@ offerContainer.addEventListener("click", async (e) => {
   const add = document.getElementById("add-quantity-btn");
   reduce.addEventListener("click", () => {
     let quantity = document.getElementById("quantity");
-    if (quantity.innerHTML != "0") {
+    if (quantity.innerHTML != "1") {
       quantity.innerHTML = Number(quantity.innerHTML) - 1;
     } else {
-      quantity.innerHTML = 0;
+      quantity.innerHTML = 1;
     }
   });
   add.addEventListener("click", () => {
     let quantity = document.getElementById("quantity");
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
+  });
+
+  const btnAdd = document.getElementById("add-product-detail");
+  btnAdd.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity").innerHTML;
+    offerToCart(offer, quantity);
   });
 });
 popularContainer.addEventListener("click", async (e) => {
@@ -62,15 +69,21 @@ popularContainer.addEventListener("click", async (e) => {
   const add = document.getElementById("add-quantity-btn");
   reduce.addEventListener("click", () => {
     let quantity = document.getElementById("quantity");
-    if (quantity.innerHTML != "0") {
+    if (quantity.innerHTML != "1") {
       quantity.innerHTML = Number(quantity.innerHTML) - 1;
     } else {
-      quantity.innerHTML = 0;
+      quantity.innerHTML = 1;
     }
   });
   add.addEventListener("click", () => {
     let quantity = document.getElementById("quantity");
     quantity.innerHTML = Number(quantity.innerHTML) + 1;
+  });
+
+  const btnAdd = document.getElementById("add-product-detail");
+  btnAdd.addEventListener("click", () => {
+    let quantity = document.getElementById("quantity").innerHTML;
+    popularToCart(popular, quantity);
   });
 });
 
@@ -84,6 +97,7 @@ const hideCart = () => {
 
 cart.addEventListener("click", () => {
   modalCart.style.display = "block";
+  showProductsCart();
 });
 closeCart.addEventListener("click", hideCart);
 addProductsN.addEventListener("click", hideCart);

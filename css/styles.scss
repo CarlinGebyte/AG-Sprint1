@@ -58,6 +58,9 @@ body {
             margin: 0 auto;
             #add-quantity, #quantity, #reduce-quantity{
               width: 25%;
+              #reduce-quantity-btn, #add-quantity-btn {
+                cursor: pointer;
+              }
             }
           }
           #add-detail {

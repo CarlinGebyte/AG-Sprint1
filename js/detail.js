@@ -32,9 +32,9 @@ const detailProduct = async (product, url) => {
     </select>
     <div id="action-detail">
         <div id="quantity-product">
-            <div id="reduce-quantity"><span>&#8722;</span></div>
+            <div id="reduce-quantity"><span id="reduce-quantity-btn">&#8722;</span></div>
             <div id="quantity">1</div>
-            <div id="add-quantity"><span>&#x2B</span></div>
+            <div id="add-quantity"><span id="add-quantity-btn">&#x2B</span></div>
         </div>
         <div id="add-detail">
             <button class="btn btn-success" value="${id}" id="add-product-detail">Agregar</button>

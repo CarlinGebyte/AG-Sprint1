@@ -72,6 +72,15 @@ body {
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity {
   width: 25%;
 }
+.modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn, .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #add-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn {
+  cursor: pointer;
+}
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail {
   width: 60%;

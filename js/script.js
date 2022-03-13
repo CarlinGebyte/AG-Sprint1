@@ -11,6 +11,8 @@ const cart = document.getElementById("cart-button");
 const modalCart = document.getElementById("modal-cart");
 const closeCart = document.getElementById("close-cart");
 const addProductsN = document.getElementById("add-products-n");
+const reduceQuantity = document.getElementById("reduce-quantity-btn");
+const addQuantity = document.getElementById("add-quantity-btn");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -23,12 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showPopular(popular, popularContainer);
 });
 
-// card.addEventListener("click", (e) => {
-//   console.log(modal);
-//   let id = e.target.getAttribute("value");
-//   let offer = getProducts(`${endpoint}Offers/${id}`);
-//   modal.classList.add("show");
-// });
+// PRODUCT DETAIL
 
 closeDetail.addEventListener("click", () => {
   modalDetail.style.display = "none";
@@ -47,6 +44,22 @@ popularContainer.addEventListener("click", async (e) => {
   await detailProduct(popular, `${endpoint}Offers`);
 });
 
+reduceQuantity.addEventListener("click", () => {
+  let quantity = document.getElementById("quantity");
+  if (quantity.innerHTML != "0") {
+    quantity.innerHTML = Number(quantity.innerHTML) - 1;
+  } else {
+    quantity.innerHTML = 0;
+  }
+});
+addQuantity.addEventListener("click", () => {
+  let quantity = document.getElementById("quantity");
+    quantity.innerHTML = Number(quantity.innerHTML) + 1;
+
+});
+
+// END PRODUCT DETAIL
+
 // CART
 
 const hideCart = () => {
@@ -58,3 +71,5 @@ cart.addEventListener("click", () => {
 });
 closeCart.addEventListener("click", hideCart);
 addProductsN.addEventListener("click", hideCart);
+
+// END CART

@@ -18,6 +18,9 @@ const locationText = document.getElementById("text-location-header");
 const locationLogo = document.getElementById("logo-location-header");
 const modalLocation = document.getElementById("modal-location-bg");
 const closeLocation = document.getElementById("close-location");
+const inputLocation = document.getElementById("selector-location");
+const btnSearchLocation = document.getElementById("search-btn");
+const location = document.getElementById("text-location-header");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -109,6 +112,7 @@ addProductsN.addEventListener("click", hideCart);
 // END CART
 
 // HEADER LOCATION
+
 const showLocationModal = () => {
   modalLocation.style.display = "block";
 };
@@ -116,6 +120,15 @@ const hideLocation = () => {
   modalLocation.style.display = "none";
 };
 
+inputLocation.addEventListener("change", () => {
+  btnSearchLocation.removeAttribute("disabled");
+});
+
+btnSearchLocation.addEventListener("click", () => {
+  let locationUser = inputLocation.value;
+  location.innerText = locationUser;
+  hideLocation();
+});
 closeLocation.addEventListener("click", hideLocation);
 
 locationText.addEventListener("click", showLocationModal);

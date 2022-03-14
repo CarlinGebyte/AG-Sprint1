@@ -33,7 +33,8 @@
                 </div>
 
                 <div id="location">
-                    <h5><img src="img/location-orange.png" alt=""> <span>Ubicación</span></h5>
+                    <h5><img src="img/location-orange.png" alt="location" id="logo-location-header"> <span
+                            id="text-location-header">Ubicación</span></h5>
                 </div>
                 <div id="cart">
                     <button class="btn btn-success" id="cart-button"><span><img src="img/cart-white.png" id="cart-icon"
@@ -184,6 +185,38 @@
         </div>
 
         <!-- END MODAL DETAILS -->
+
+        <!-- MODAL LOCATION -->
+
+        <div class="modal-location-bg">
+            <div class="modal-location-container">
+                <div id="close-location">
+                    <span>&#10006</span>
+                </div>
+                <div id="content-location">
+                    <div id="location-tittle">
+                        <h3>¿Dónde quieres recibir tu pedido?</h3>
+                    </div>
+                    <div id="location-text">
+                        <p>Para poder ofrecerle productos dentro de tu área, necesitamos tu dirección</p>
+                    </div>
+                    <div id="select-location">
+                        <select class="form-control" id="selector-location" name="location-select" id="location-select">
+                            <option value="" hidden selected>Seleccionar</option>
+                            <option value="Neiva">Neiva</option>
+                            <option value="Palermo">Palermo</option>
+                            <option value="Bogotá">Bogotá</option>
+                        </select>
+                    </div>
+                    <div id="btn-search-location">
+                        <button class="btn btn-success">Buscar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- END MODAL LOCATION -->
     </main>
 
     <script src="./js/script.js" type="module"></script>

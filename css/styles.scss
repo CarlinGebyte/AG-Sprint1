@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html {
   position: relative;
   display: flex;
@@ -8,8 +9,9 @@ body {
   height: 100%;
   vertical-align: baseline;
   width: 100%;
+  font-family: 'Poppins';
 }
-.modal-detail-bg, .modal-cart-bg {
+.modal-detail-bg, .modal-cart-bg, .modal-location-bg {
   background-color: #00000059;
   position: absolute;
   left: 0;
@@ -196,6 +198,42 @@ body {
       }
     }
   }
+
+  .modal-location-container {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 2em;
+    height: 19em;
+    padding: 2em;
+    #close-location {
+      position: relative;
+      text-align: center;
+      font-size: 1.4em;
+      width: 1.5em;
+      height: 1.5em;
+      top: 0;
+      left: 93%;
+      background-color: #000;
+      border-radius: 50%;
+      color: #fff;
+    }
+    #content-location {
+      margin-top: 3%;
+      display: flex;
+      flex-direction: column;
+      #btn-search-location {
+        width: 100%;
+        display: flex;
+        margin-top: 1em;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 .container {
   max-width: 100%;
@@ -205,6 +243,7 @@ body {
 #header {
   background-color: #fff;
   padding: 1.5% 0;
+  margin-bottom: 2em;
   .container-header {
     display: flex;
     align-items: center;
@@ -233,8 +272,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 30vh;
-  line-height: 30vh;
+  height: 35vh;
+  line-height: 35vh;
   text-align: center;
   color: #fff;
   border-radius: 1em;
@@ -242,6 +281,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    font-size: 1.7em;
     margin: 0;
   }
 }

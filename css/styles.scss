@@ -208,6 +208,7 @@ body {
     height: 19em;
     padding: 2em;
     #close-location {
+      cursor: pointer;
       position: relative;
       text-align: center;
       font-size: 1.4em;
@@ -255,6 +256,9 @@ body {
       text-align: right;
       h5 {
         margin: 0;
+        #text-location-header, #logo-location-header {
+          cursor: pointer;
+        }
       }
     }
     #cart {

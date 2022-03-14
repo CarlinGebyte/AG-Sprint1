@@ -270,6 +270,7 @@ body {
   padding: 2em;
 }
 .modal-detail-bg .modal-location-container #close-location, .modal-cart-bg .modal-location-container #close-location, .modal-location-bg .modal-location-container #close-location {
+  cursor: pointer;
   position: relative;
   text-align: center;
   font-size: 1.4em;
@@ -319,6 +320,9 @@ body {
 }
 #header .container-header #location h5 {
   margin: 0;
+}
+#header .container-header #location h5 #text-location-header, #header .container-header #location h5 #logo-location-header {
+  cursor: pointer;
 }
 #header .container-header #cart {
   width: 10%;

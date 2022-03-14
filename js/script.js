@@ -16,6 +16,8 @@ const closeCart = document.getElementById("close-cart");
 const addProductsN = document.getElementById("add-products-n");
 const locationText = document.getElementById("text-location-header");
 const locationLogo = document.getElementById("logo-location-header");
+const modalLocation = document.getElementById("modal-location-bg");
+const closeLocation = document.getElementById("close-location");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -108,10 +110,15 @@ addProductsN.addEventListener("click", hideCart);
 
 // HEADER LOCATION
 const showLocationModal = () => {
-  console.log('holas')
-}
+  modalLocation.style.display = "block";
+};
+const hideLocation = () => {
+  modalLocation.style.display = "none";
+};
 
-locationText.addEventListener("click", showLocationModal)
+closeLocation.addEventListener("click", hideLocation);
+
+locationText.addEventListener("click", showLocationModal);
 locationLogo.addEventListener("click", showLocationModal);
 
 // END HEADER LOCATION

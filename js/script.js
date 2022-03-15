@@ -6,6 +6,7 @@ import offerToCart from "./cart.js";
 import { popularToCart } from "./cart.js";
 import { showProductsCart } from "./cart.js";
 import { ShowProductsPayment } from "./payment.js";
+import { validatorCard } from "./payment.js";
 
 const offerContainer = document.getElementById("offers-container");
 const popularContainer = document.getElementById("popular-container");
@@ -145,7 +146,7 @@ cartItems.addEventListener("click", (e) => {
       console.log(total);
       btnPayment.innerHTML = `
         Pagar <span>$${total}</span>
-      `; 
+      `;
       ShowProductsPayment();
       break;
   }
@@ -183,7 +184,14 @@ locationLogo.addEventListener("click", showLocationModal);
 
 const closePayment = () => {
   paymentModal.style.display = "none";
+  const btnPayment = document.getElementById("btn-payment-pay");
+  const form = document.getElementById("form-payment");
+  btnPayment.removeAttribute("disabled");
+  btnPayment.setAttribute("disabled", 'disabled');
+  form.reset()
 };
 
 closePayment1.addEventListener("click", closePayment);
 closePayment2.addEventListener("click", closePayment);
+
+validatorCard();

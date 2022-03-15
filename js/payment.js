@@ -55,3 +55,32 @@ export const ShowProductsPayment = () => {
     }
   }
 };
+
+export const validatorCard = () => {
+  const secureCVC = document.getElementById("secure-code");
+  const cardNumber = document.getElementById("card-number-input");
+  const btnPayment = document.getElementById("btn-payment-pay");
+  const nameCard = document.getElementById("name-card-input");
+  secureCVC.addEventListener("keyup", () => {
+    if (isNaN(secureCVC.value)) {
+      secureCVC.value = "";
+    }
+  });
+  cardNumber.addEventListener("keyup", () => {
+    if (isNaN(cardNumber.value.replaceAll(" ", ""))) {
+      cardNumber.value = "";
+    }
+    if (
+      cardNumber.value.length == 4 ||
+      cardNumber.value.length == 9 ||
+      cardNumber.value.length == 14
+    ) {
+      cardNumber.value += " ";
+    }
+  });
+  nameCard.addEventListener("keyup", () => {
+    if (cardNumber.value != "" && secureCVC.value != "") {
+        btnPayment.removeAttribute('disabled')
+    }
+  });
+};

@@ -234,7 +234,7 @@
 
                 </div>
                 <div id="payment-content">
-                    <form action="">
+                    <form action="" id="form-payment">
                         <div id="email-payment">
                             <label for="email-input">Correo electrónico</label>
                             <input type="email" class="form-control" id="email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
@@ -283,7 +283,7 @@
                                 <option value="39">39</option>
                                 <option value="40">40</option>
                             </select>
-                            <input class="form-control" id="secure-code" type="text" placeholder="CVC" required>
+                            <input class="form-control" id="secure-code" type="text" maxlength="3" placeholder="CVC" required>
                         </div>
                         <div id="name-card">
                             <label for="name-card-input">Nombre de la tarjeta</label>

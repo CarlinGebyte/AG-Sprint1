@@ -90,6 +90,8 @@ export const showProductsCart = () => {
   let cartPopular = JSON.parse(localStorage.getItem("Popular"));
   const cartItems = document.getElementById("cart-products");
   const modalCart = document.getElementById("modal-cart");
+  const noProducts = document.getElementById("no-products");
+
   if (cartOffers != null || cartPopular != null) {
     cartItems.innerHTML = "";
   }
@@ -148,7 +150,7 @@ export const showProductsCart = () => {
   if (cartOffers != null || cartPopular != null) {
     cartItems.innerHTML += `
       <div id="cart-actions-end">
-        <div id="clear-cart"><p>Vaciar canasta</p></div>
+        <div id="clear-cart"><p id="clear-cart-btn">Vaciar canasta</p></div>
         <div id="pay-cart">
           <button class="btn btn-success" id="pay-cart-btn">
             <div id="count-cart-modal">${count}</div>
@@ -158,8 +160,11 @@ export const showProductsCart = () => {
         </div>
       </div>
     `;
+    localStorage.setItem('total', JSON.stringify(`${total}`))
+    noProducts.style.display = "none";
   }
   modalCart.style.display = "block";
+  
 };
 
 export default offerToCart;

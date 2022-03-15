@@ -5,6 +5,7 @@ import detailProduct from "./detail.js";
 import offerToCart from "./cart.js";
 import { popularToCart } from "./cart.js";
 import { showProductsCart } from "./cart.js";
+import { ShowProductsPayment } from "./payment.js";
 
 const offerContainer = document.getElementById("offers-container");
 const popularContainer = document.getElementById("popular-container");
@@ -21,6 +22,10 @@ const closeLocation = document.getElementById("close-location");
 const inputLocation = document.getElementById("selector-location");
 const btnSearchLocation = document.getElementById("search-btn");
 const location = document.getElementById("text-location-header");
+const locationCart = document.getElementById("location-cart-tittle");
+const paymentModal = document.getElementById("payment-bg");
+const closePayment1 = document.getElementById("bg-return");
+const closePayment2 = document.getElementById("return-text");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -35,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PRODUCT DETAIL
 
-const addQuantity = (quantityContainer) => {};
+// const addQuantity = (quantityContainer) => {};
 
 closeDetail.addEventListener("click", () => {
   modalDetail.style.display = "none";
@@ -97,6 +102,8 @@ popularContainer.addEventListener("click", async (e) => {
 // END PRODUCT DETAIL
 
 // CART
+const cartItems = document.getElementById("cart-products");
+const noProducts = document.getElementById("no-products");
 
 const hideCart = () => {
   modalCart.style.display = "none";
@@ -108,6 +115,41 @@ cart.addEventListener("click", () => {
 });
 closeCart.addEventListener("click", hideCart);
 addProductsN.addEventListener("click", hideCart);
+
+cartItems.addEventListener("click", (e) => {
+  const { target } = e;
+  switch (target.id) {
+    case "clear-cart-btn":
+      const emptyCart = document.getElementById("clear-cart-btn");
+      if (emptyCart != null) {
+        emptyCart.addEventListener("click", localStorage.clear());
+      }
+      cartItems.innerHTML = "";
+      noProducts.style.display = "block";
+      console.log(target.id);
+      break;
+    case "pay-cart-btn":
+    case "total-price-cart":
+    case "count-cart-modal":
+    case "go-pay":
+      const openPaymentBtn = document.getElementById(`${target.id}`);
+      const paymentModal = document.getElementById("payment-bg");
+      const showPayment = () => {
+        paymentModal.style.display = "block";
+      };
+      console.log(openPaymentBtn);
+      openPaymentBtn.addEventListener("click", showPayment());
+      console.log(target.id);
+      const btnPayment = document.getElementById("btn-payment-pay");
+      let total = JSON.parse(localStorage.getItem("total"));
+      console.log(total);
+      btnPayment.innerHTML = `
+        Pagar <span>$${total}</span>
+      `; 
+      ShowProductsPayment();
+      break;
+  }
+});
 
 // END CART
 
@@ -127,6 +169,7 @@ inputLocation.addEventListener("change", () => {
 btnSearchLocation.addEventListener("click", () => {
   let locationUser = inputLocation.value;
   location.innerText = locationUser;
+  locationCart.innerText = locationUser;
   hideLocation();
 });
 closeLocation.addEventListener("click", hideLocation);
@@ -135,3 +178,12 @@ locationText.addEventListener("click", showLocationModal);
 locationLogo.addEventListener("click", showLocationModal);
 
 // END HEADER LOCATION
+
+// PAYMENT MODAL
+
+const closePayment = () => {
+  paymentModal.style.display = "none";
+};
+
+closePayment1.addEventListener("click", closePayment);
+closePayment2.addEventListener("click", closePayment);

@@ -92,7 +92,7 @@
                 <div id="cart-header">
                     <div id="location-cart">
                         <p>Entregar en:
-                        <h5> Ubicación</h5>
+                        <h5 id="location-cart-tittle"> Ubicación</h5>
                         </p>
                     </div>
                     <div id="close-cart">
@@ -116,11 +116,11 @@
                             </div>
                         </div>
                     </div> -->
-                    <div id="no-products">
-                        <img src="img/Family Values Shopping.png" alt="">
-                        <h3>Tu canasta está vacía</h3>
-                        <a class="btn btn-success" href="#offers" id="add-products-n">Agregar productos</a>
-                    </div>
+                </div>
+                <div id="no-products">
+                    <img src="img/Family Values Shopping.png" alt="">
+                    <h3>Tu canasta está vacía</h3>
+                    <a class="btn btn-success" href="#offers" id="add-products-n">Agregar productos</a>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@
                         </select>
                     </div>
                     <div id="btn-search-location">
-                        <button class="btn btn-success" id="search-btn"disabled>Buscar</button>
+                        <button class="btn btn-success" id="search-btn" disabled>Buscar</button>
                     </div>
                 </div>
 
@@ -217,6 +217,87 @@
         </div>
 
         <!-- END MODAL LOCATION -->
+
+        <!-- MODAL PAYMENT -->
+
+        <div id="payment-bg">
+            <div id="payment-container">
+                <div id="return-container">
+                    <div id="return-cart">
+                        <div id="bg-return">
+                            <span id="return-payment">&#60;</span>
+                        </div>
+                        <span id="return-text">Volver</span>
+                    </div>
+                </div>
+                <div id="cart-payment">
+
+                </div>
+                <div id="payment-content">
+                    <form action="">
+                        <div id="email-payment">
+                            <label for="email-input">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                        </div>
+
+                        <div id="card-number">
+                            <label for="card-number-input">Información de la tarjeta</label>
+                            <input type="text" class="form-control" id="card-number-input" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        </div>
+                        <div id="expiration-card">
+                            <select name="month" class="form-control" id="month-card">
+                                <option value="" selected hidden>Mes</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <label for="">/</label>
+                            <select name="year" class="form-control" id="year-card">
+                                <option value="" selected hidden>Año</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                                <option value="33">33</option>
+                                <option value="34">34</option>
+                                <option value="35">35</option>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                            </select>
+                            <input class="form-control" id="secure-code" type="text" placeholder="CVC" required>
+                        </div>
+                        <div id="name-card">
+                            <label for="name-card-input">Nombre de la tarjeta</label>
+                            <input type="text" class="form-control" id="name-card-input" required>
+                        </div>
+                        <div id="action-payment">
+                            <button class="btn btn-success" id="btn-payment-pay" disabled>Pagar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- END MODAL PAYMENT -->
     </main>
 
     <script src="./js/script.js" type="module"></script>

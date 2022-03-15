@@ -13,7 +13,9 @@ body {
   font-family: "Poppins";
 }
 
-.modal-detail-bg, .modal-cart-bg, .modal-location-bg {
+.modal-detail-bg,
+.modal-cart-bg,
+.modal-location-bg {
   background-color: #00000059;
   position: absolute;
   left: 0;
@@ -24,7 +26,9 @@ body {
   height: 100%;
   display: none;
 }
-.modal-detail-bg .container-detail, .modal-cart-bg .container-detail, .modal-location-bg .container-detail {
+.modal-detail-bg .container-detail,
+.modal-cart-bg .container-detail,
+.modal-location-bg .container-detail {
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -34,7 +38,9 @@ body {
   width: 82%;
   margin: 3% auto;
 }
-.modal-detail-bg .container-detail #close-detail, .modal-cart-bg .container-detail #close-detail, .modal-location-bg .container-detail #close-detail {
+.modal-detail-bg .container-detail #close-detail,
+.modal-cart-bg .container-detail #close-detail,
+.modal-location-bg .container-detail #close-detail {
   position: relative;
   left: 98%;
   padding: 0 0 0 8px;
@@ -47,25 +53,33 @@ body {
   height: 1.5em;
   cursor: pointer;
 }
-.modal-detail-bg .container-detail #body-detail, .modal-cart-bg .container-detail #body-detail, .modal-location-bg .container-detail #body-detail {
+.modal-detail-bg .container-detail #body-detail,
+.modal-cart-bg .container-detail #body-detail,
+.modal-location-bg .container-detail #body-detail {
   display: flex;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail, .modal-cart-bg .container-detail #body-detail #img-detail,
-.modal-cart-bg .container-detail #body-detail #product-detail, .modal-location-bg .container-detail #body-detail #img-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail,
+.modal-cart-bg .container-detail #body-detail #img-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail,
+.modal-location-bg .container-detail #body-detail #img-detail,
 .modal-location-bg .container-detail #body-detail #product-detail {
   width: 50%;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail, .modal-location-bg .container-detail #body-detail #img-detail #action-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail,
 .modal-location-bg .container-detail #body-detail #product-detail #action-detail {
   margin-top: 2%;
   display: flex;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product, .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product,
 .modal-location-bg .container-detail #body-detail #product-detail #action-detail #quantity-product {
   display: flex;
   width: 30%;
@@ -80,12 +94,14 @@ body {
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
 .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity,
 .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
 .modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
 .modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity, .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity,
 .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity,
 .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #reduce-quantity,
 .modal-location-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #add-quantity,
@@ -104,7 +120,8 @@ body {
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #add-quantity-btn,
 .modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
 .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
 .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
 .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn,
@@ -115,7 +132,8 @@ body {
 .modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
 .modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #quantity #add-quantity-btn,
 .modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #reduce-quantity-btn,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn, .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #quantity-product #reduce-quantity #add-quantity-btn,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #reduce-quantity-btn,
 .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #add-quantity #add-quantity-btn,
 .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #reduce-quantity-btn,
 .modal-location-bg .container-detail #body-detail #img-detail #action-detail #quantity-product #quantity #add-quantity-btn,
@@ -130,19 +148,25 @@ body {
   cursor: pointer;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail, .modal-location-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail #add-detail,
 .modal-location-bg .container-detail #body-detail #product-detail #action-detail #add-detail {
   width: 60%;
   text-align: right;
 }
 .modal-detail-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
-.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail, .modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
-.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail, .modal-location-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
+.modal-detail-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail,
+.modal-cart-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
+.modal-cart-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail,
+.modal-location-bg .container-detail #body-detail #img-detail #action-detail #add-detail #add-product-detail,
 .modal-location-bg .container-detail #body-detail #product-detail #action-detail #add-detail #add-product-detail {
   width: 90%;
 }
-.modal-detail-bg .container-cart, .modal-cart-bg .container-cart, .modal-location-bg .container-cart {
+.modal-detail-bg .container-cart,
+.modal-cart-bg .container-cart,
+.modal-location-bg .container-cart {
   position: absolute;
   display: flex;
   right: 0;
@@ -153,7 +177,9 @@ body {
   padding: 1em;
   flex-direction: column;
 }
-.modal-detail-bg .container-cart #cart-header, .modal-cart-bg .container-cart #cart-header, .modal-location-bg .container-cart #cart-header {
+.modal-detail-bg .container-cart #cart-header,
+.modal-cart-bg .container-cart #cart-header,
+.modal-location-bg .container-cart #cart-header {
   position: relative;
   display: flex;
   width: 100%;
@@ -161,22 +187,30 @@ body {
   align-items: center;
   margin-bottom: 1.5em;
 }
-.modal-detail-bg .container-cart #location-cart, .modal-cart-bg .container-cart #location-cart, .modal-location-bg .container-cart #location-cart {
+.modal-detail-bg .container-cart #location-cart,
+.modal-cart-bg .container-cart #location-cart,
+.modal-location-bg .container-cart #location-cart {
   position: relative;
   display: flex;
   width: 80%;
   align-items: center;
 }
 .modal-detail-bg .container-cart #location-cart p,
-.modal-detail-bg .container-cart #location-cart h5, .modal-cart-bg .container-cart #location-cart p,
-.modal-cart-bg .container-cart #location-cart h5, .modal-location-bg .container-cart #location-cart p,
+.modal-detail-bg .container-cart #location-cart h5,
+.modal-cart-bg .container-cart #location-cart p,
+.modal-cart-bg .container-cart #location-cart h5,
+.modal-location-bg .container-cart #location-cart p,
 .modal-location-bg .container-cart #location-cart h5 {
   margin: 0;
 }
-.modal-detail-bg .container-cart #location-cart h5, .modal-cart-bg .container-cart #location-cart h5, .modal-location-bg .container-cart #location-cart h5 {
+.modal-detail-bg .container-cart #location-cart h5,
+.modal-cart-bg .container-cart #location-cart h5,
+.modal-location-bg .container-cart #location-cart h5 {
   margin-left: 4px;
 }
-.modal-detail-bg .container-cart #close-cart, .modal-cart-bg .container-cart #close-cart, .modal-location-bg .container-cart #close-cart {
+.modal-detail-bg .container-cart #close-cart,
+.modal-cart-bg .container-cart #close-cart,
+.modal-location-bg .container-cart #close-cart {
   position: relative;
   width: 1.5em;
   height: 1.5em;
@@ -186,34 +220,50 @@ body {
   color: #fff;
   cursor: pointer;
 }
-.modal-detail-bg .container-cart #no-products, .modal-cart-bg .container-cart #no-products, .modal-location-bg .container-cart #no-products {
+.modal-detail-bg .container-cart #no-products,
+.modal-cart-bg .container-cart #no-products,
+.modal-location-bg .container-cart #no-products {
   margin: 30% auto;
   text-align: center;
 }
-.modal-detail-bg .container-cart #cart-products .product:first-child, .modal-cart-bg .container-cart #cart-products .product:first-child, .modal-location-bg .container-cart #cart-products .product:first-child {
+.modal-detail-bg .container-cart #cart-products .product:first-child,
+.modal-cart-bg .container-cart #cart-products .product:first-child,
+.modal-location-bg .container-cart #cart-products .product:first-child {
   border-top: 1px solid #ccc;
 }
-.modal-detail-bg .container-cart #cart-products .product, .modal-cart-bg .container-cart #cart-products .product, .modal-location-bg .container-cart #cart-products .product {
+.modal-detail-bg .container-cart #cart-products .product,
+.modal-cart-bg .container-cart #cart-products .product,
+.modal-location-bg .container-cart #cart-products .product {
   padding: 1em 0;
   display: flex;
   border-bottom: 1px solid #ccc;
   align-items: center;
 }
-.modal-detail-bg .container-cart #cart-products .product .product-cart-text, .modal-cart-bg .container-cart #cart-products .product .product-cart-text, .modal-location-bg .container-cart #cart-products .product .product-cart-text {
+.modal-detail-bg .container-cart #cart-products .product .product-cart-text,
+.modal-cart-bg .container-cart #cart-products .product .product-cart-text,
+.modal-location-bg .container-cart #cart-products .product .product-cart-text {
   width: 53%;
 }
-.modal-detail-bg .container-cart #cart-products .product .image-cart-product, .modal-cart-bg .container-cart #cart-products .product .image-cart-product, .modal-location-bg .container-cart #cart-products .product .image-cart-product {
+.modal-detail-bg .container-cart #cart-products .product .image-cart-product,
+.modal-cart-bg .container-cart #cart-products .product .image-cart-product,
+.modal-location-bg .container-cart #cart-products .product .image-cart-product {
   width: 25%;
 }
-.modal-detail-bg .container-cart #cart-products .product .image-cart-product img, .modal-cart-bg .container-cart #cart-products .product .image-cart-product img, .modal-location-bg .container-cart #cart-products .product .image-cart-product img {
+.modal-detail-bg .container-cart #cart-products .product .image-cart-product img,
+.modal-cart-bg .container-cart #cart-products .product .image-cart-product img,
+.modal-location-bg .container-cart #cart-products .product .image-cart-product img {
   width: 100%;
 }
-.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity, .modal-location-bg .container-cart #cart-products .product .cart-product-quantity {
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity,
+.modal-cart-bg .container-cart #cart-products .product .cart-product-quantity,
+.modal-location-bg .container-cart #cart-products .product .cart-product-quantity {
   display: flex;
   width: 20%;
   margin-top: 0.3em;
 }
-.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container, .modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container {
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container,
+.modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container,
+.modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container {
   background-color: #fff;
   border-radius: 0.5em;
   height: 7vh;
@@ -225,24 +275,40 @@ body {
   justify-content: space-between;
   font-weight: 600;
 }
-.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity, .modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity, .modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity, .modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity, .modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity {
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity,
+.modal-detail-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity,
+.modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity,
+.modal-cart-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity,
+.modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .reduce-cart-quantity,
+.modal-location-bg .container-cart #cart-products .product .cart-product-quantity .action-cart-container .add-cart-quantity {
   font-size: 1.5em;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end, .modal-cart-bg .container-cart #cart-products #cart-actions-end, .modal-location-bg .container-cart #cart-products #cart-actions-end {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end,
+.modal-location-bg .container-cart #cart-products #cart-actions-end {
   margin-top: 1em;
   display: flex;
   align-items: center;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart, .modal-location-bg .container-cart #cart-products #cart-actions-end #clear-cart {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #clear-cart {
   width: 55%;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart p, .modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart p, .modal-location-bg .container-cart #cart-products #cart-actions-end #clear-cart p {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #clear-cart p,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #clear-cart p,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #clear-cart p {
   margin: 0;
+  cursor: pointer;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart, .modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart {
   width: 45%;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn, .modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn {
   width: 100%;
   display: flex;
   padding: 0.6em;
@@ -252,15 +318,21 @@ body {
   font-weight: 800;
   text-transform: initial;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal, .modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #count-cart-modal {
   width: 1.5em;
-  background-color: #2E7E78;
+  background-color: #2e7e78;
   border-radius: 0.3em;
 }
-.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart, .modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart, .modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart {
+.modal-detail-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart,
+.modal-cart-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart,
+.modal-location-bg .container-cart #cart-products #cart-actions-end #pay-cart #pay-cart-btn #total-price-cart {
   width: 35;
 }
-.modal-detail-bg .modal-location-container, .modal-cart-bg .modal-location-container, .modal-location-bg .modal-location-container {
+.modal-detail-bg .modal-location-container,
+.modal-cart-bg .modal-location-container,
+.modal-location-bg .modal-location-container {
   width: 60%;
   background-color: #fff;
   border-radius: 1em;
@@ -269,7 +341,9 @@ body {
   height: 19em;
   padding: 2em;
 }
-.modal-detail-bg .modal-location-container #close-location, .modal-cart-bg .modal-location-container #close-location, .modal-location-bg .modal-location-container #close-location {
+.modal-detail-bg .modal-location-container #close-location,
+.modal-cart-bg .modal-location-container #close-location,
+.modal-location-bg .modal-location-container #close-location {
   cursor: pointer;
   position: relative;
   text-align: center;
@@ -282,17 +356,23 @@ body {
   border-radius: 50%;
   color: #fff;
 }
-.modal-detail-bg .modal-location-container #content-location, .modal-cart-bg .modal-location-container #content-location, .modal-location-bg .modal-location-container #content-location {
+.modal-detail-bg .modal-location-container #content-location,
+.modal-cart-bg .modal-location-container #content-location,
+.modal-location-bg .modal-location-container #content-location {
   margin-top: 3%;
   display: flex;
   flex-direction: column;
 }
-.modal-detail-bg .modal-location-container #content-location #btn-search-location, .modal-cart-bg .modal-location-container #content-location #btn-search-location, .modal-location-bg .modal-location-container #content-location #btn-search-location {
+.modal-detail-bg .modal-location-container #content-location #btn-search-location,
+.modal-cart-bg .modal-location-container #content-location #btn-search-location,
+.modal-location-bg .modal-location-container #content-location #btn-search-location {
   width: 100%;
   display: flex;
   margin-top: 1em;
 }
-.modal-detail-bg .modal-location-container #content-location #btn-search-location button, .modal-cart-bg .modal-location-container #content-location #btn-search-location button, .modal-location-bg .modal-location-container #content-location #btn-search-location button {
+.modal-detail-bg .modal-location-container #content-location #btn-search-location button,
+.modal-cart-bg .modal-location-container #content-location #btn-search-location button,
+.modal-location-bg .modal-location-container #content-location #btn-search-location button {
   width: 100%;
 }
 
@@ -321,7 +401,8 @@ body {
 #header .container-header #location h5 {
   margin: 0;
 }
-#header .container-header #location h5 #text-location-header, #header .container-header #location h5 #logo-location-header {
+#header .container-header #location h5 #text-location-header,
+#header .container-header #location h5 #logo-location-header {
   cursor: pointer;
 }
 #header .container-header #cart {
@@ -349,6 +430,118 @@ body {
   line-height: normal;
   font-size: 1.7em;
   margin: 0;
+}
+
+#payment-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  padding: 2em;
+}
+#payment-bg #payment-container {
+  width: 100%;
+  display: flex;
+  padding-top: 3em;
+}
+#payment-bg #payment-container #cart-payment {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 1em;
+  min-height: 80vh;
+  margin-right: 10%;
+}
+#payment-bg #payment-container #cart-payment .product {
+  padding: 1em 0;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+}
+#payment-bg #payment-container #cart-payment .product .product-payment-text {
+  width: 50%;
+}
+#payment-bg #payment-container #cart-payment .product .image-payment-product {
+  width: 25%;
+}
+#payment-bg #payment-container #cart-payment .product .image-payment-product img {
+  width: 100%;
+}
+#payment-bg #payment-container #cart-payment .product .payment-product-quantity {
+  display: flex;
+  width: 20%;
+  margin-top: 0.3em;
+}
+#payment-bg #payment-container #cart-payment .product .payment-product-quantity .action-payment-container {
+  background-color: #fff;
+  border-radius: 0.5em;
+  height: 7vh;
+  align-items: center;
+  padding: 1em;
+  box-shadow: -3px 2px 26px 3px rgba(0, 0, 0, 0.068);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-weight: 600;
+}
+#payment-bg #payment-container #cart-payment .product .payment-product-quantity .action-payment-container .reduce-payment-quantity,
+#payment-bg #payment-container #cart-payment .product .payment-product-quantity .action-payment-container .add-payment-quantity {
+  font-size: 1.5em;
+}
+#payment-bg #payment-container #payment-content {
+  width: 40%;
+}
+#payment-bg #payment-container #payment-content form {
+  display: flex;
+  flex-direction: column;
+}
+#payment-bg #payment-container #payment-content form #email-payment {
+  margin-bottom: 1em;
+}
+#payment-bg #payment-container #payment-content form #expiration-card {
+  margin-bottom: 1em;
+}
+#payment-bg #payment-container #payment-content form #expiration-card #month-card,
+#payment-bg #payment-container #payment-content form #expiration-card #year-card {
+  width: 4em;
+  display: inline-block;
+}
+#payment-bg #payment-container #payment-content form #expiration-card #secure-code {
+  width: 40%;
+  display: inline-block;
+}
+#payment-bg #payment-container #payment-content form #name-card {
+  margin-bottom: 2em;
+}
+#payment-bg #payment-container #payment-content form #action-payment #btn-payment-pay {
+  width: 100%;
+  text-transform: none;
+  font-size: 1.1em;
+}
+#payment-bg #payment-container #return-container {
+  position: absolute;
+  top: 1%;
+  left: 2em;
+  height: 2em;
+  display: block;
+  font-size: 1.1em;
+  color: #fff;
+}
+#payment-bg #payment-container #return-container #return-cart #bg-return {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 1.5em;
+  background-color: #000;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+#payment-bg #payment-container #return-container #return-cart #return-text {
+  color: #000;
+  vertical-align: text-bottom;
+  cursor: pointer;
 }
 
 #offers,

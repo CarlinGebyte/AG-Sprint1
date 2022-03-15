@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
   position: relative;
   display: flex;
@@ -9,9 +9,11 @@ body {
   height: 100%;
   vertical-align: baseline;
   width: 100%;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
-.modal-detail-bg, .modal-cart-bg, .modal-location-bg {
+.modal-detail-bg,
+.modal-cart-bg,
+.modal-location-bg {
   background-color: #00000059;
   position: absolute;
   left: 0;
@@ -157,7 +159,8 @@ body {
             display: flex;
             width: 100%;
             justify-content: space-between;
-            .reduce-cart-quantity, .add-cart-quantity {
+            .reduce-cart-quantity,
+            .add-cart-quantity {
               font-size: 1.5em;
             }
             font-weight: 600;
@@ -172,6 +175,7 @@ body {
           width: 55%;
           p {
             margin: 0;
+            cursor: pointer;
           }
         }
         #pay-cart {
@@ -187,7 +191,7 @@ body {
             text-transform: initial;
             #count-cart-modal {
               width: 1.5em;
-              background-color: #2E7E78;
+              background-color: #2e7e78;
               border-radius: 0.3em;
             }
             #total-price-cart {
@@ -234,7 +238,6 @@ body {
       }
     }
   }
-
 }
 .container {
   max-width: 100%;
@@ -256,7 +259,8 @@ body {
       text-align: right;
       h5 {
         margin: 0;
-        #text-location-header, #logo-location-header {
+        #text-location-header,
+        #logo-location-header {
           cursor: pointer;
         }
       }
@@ -287,6 +291,122 @@ body {
     line-height: normal;
     font-size: 1.7em;
     margin: 0;
+  }
+}
+
+#payment-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  padding: 2em;
+  #payment-container {
+    width: 100%;
+    display: flex;
+    padding-top: 3em;
+    #cart-payment {
+      width: 45%;
+      background-color: #fff;
+      border-radius: 1em;
+      min-height: 80vh;
+      margin-right: 10%;
+      .product {
+        padding: 1em 0;
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        align-items: center;
+        .product-payment-text {
+          width: 50%;
+        }
+        .image-payment-product {
+          width: 25%;
+          img {
+            width: 100%;
+          }
+        }
+        .payment-product-quantity {
+          display: flex;
+          width: 20%;
+          margin-top: 0.3em;
+          .action-payment-container {
+            background-color: #fff;
+            border-radius: 0.5em;
+            height: 7vh;
+            align-items: center;
+            padding: 1em;
+            box-shadow: -3px 2px 26px 3px rgba(0, 0, 0, 0.068);
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .reduce-payment-quantity,
+            .add-payment-quantity {
+              font-size: 1.5em;
+            }
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    #payment-content {
+      width: 40%;
+      form {
+        display: flex;
+        flex-direction: column;
+        #email-payment {
+          margin-bottom: 1em;
+        }
+        #expiration-card {
+          margin-bottom: 1em;
+          #month-card,
+          #year-card {
+            width: 4em; // para mobile
+            display: inline-block;
+          }
+          #secure-code {
+            width: 40%;
+            display: inline-block;
+          }
+        }
+        #name-card {
+          margin-bottom: 2em;
+        }
+        #action-payment {
+          #btn-payment-pay {
+            width: 100%;
+            text-transform: none;
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+    #return-container {
+      position: absolute;
+      top: 1%;
+      left: 2em;
+      height: 2em;
+      display: block;
+      font-size: 1.1em;
+      color: #fff;
+      #return-cart {
+        #bg-return {
+          width: 1.5em;
+          height: 1.5em;
+          font-size: 1.5em;
+          background-color: #000;
+          border-radius: 50%;
+          text-align: center;
+          display: inline-block;
+          cursor: pointer;
+        }
+        #return-text {
+          color: #000;
+          vertical-align: text-bottom;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 

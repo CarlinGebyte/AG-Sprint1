@@ -31,8 +31,6 @@ export const ShowProductsPayment = () => {
     if (cartPopular != null) {
       cartPopular.forEach((productPopular) => {
         const { id, name, img, cost, quantity } = productPopular;
-        total += Number(cost);
-        count += 1;
         paymentItems.innerHTML += `
         <div class="product">
             <div class="image-payment-product">

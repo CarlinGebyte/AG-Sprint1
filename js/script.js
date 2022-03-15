@@ -12,6 +12,7 @@ const offerContainer = document.getElementById("offers-container");
 const popularContainer = document.getElementById("popular-container");
 const closeDetail = document.getElementById("close-detail");
 const modalDetail = document.getElementById("modal-detail-bg");
+const addAlert = document.getElementById("alert-add");
 const cart = document.getElementById("cart-button");
 const modalCart = document.getElementById("modal-cart");
 const closeCart = document.getElementById("close-cart");
@@ -47,6 +48,10 @@ closeDetail.addEventListener("click", () => {
   modalDetail.style.display = "none";
 });
 
+const hideAlert = () => {
+  addAlert.style.display = "none";
+};
+
 offerContainer.addEventListener("click", async (e) => {
   modalDetail.style.display = "block";
   let id = e.target.getAttribute("value");
@@ -71,6 +76,9 @@ offerContainer.addEventListener("click", async (e) => {
   btnAdd.addEventListener("click", () => {
     let quantity = document.getElementById("quantity").innerHTML;
     offerToCart(offer, quantity);
+    modalDetail.style.display = "none";
+    addAlert.style.display = "block";
+    window.setTimeout(hideAlert, 4000);
   });
 });
 popularContainer.addEventListener("click", async (e) => {
@@ -97,6 +105,9 @@ popularContainer.addEventListener("click", async (e) => {
   btnAdd.addEventListener("click", () => {
     let quantity = document.getElementById("quantity").innerHTML;
     popularToCart(popular, quantity);
+    modalDetail.style.display = "none";
+    addAlert.style.display = "block";
+    window.setTimeout(hideAlert, 4000);
   });
 });
 
@@ -187,8 +198,8 @@ const closePayment = () => {
   const btnPayment = document.getElementById("btn-payment-pay");
   const form = document.getElementById("form-payment");
   btnPayment.removeAttribute("disabled");
-  btnPayment.setAttribute("disabled", 'disabled');
-  form.reset()
+  btnPayment.setAttribute("disabled", "disabled");
+  form.reset();
 };
 
 closePayment1.addEventListener("click", closePayment);

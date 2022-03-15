@@ -611,6 +611,22 @@ body {
   width: 10%;
 }
 
+#bg-thanks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+#bg-thanks #modal-thanks {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 1em;
+  text-align: center;
+}
+
 #offers,
 #popular,
 #related {

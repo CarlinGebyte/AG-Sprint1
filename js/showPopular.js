@@ -13,18 +13,20 @@ export const showPopular = async (array, cardContainer) => {
                     <div class="card-body" value="${id}">
                         <h5 class="card-title" value="${id}">${price}</h5>
                         <p class="card-text" value="${id}">${name}</p>
-                        <p class="card-text" value="${id}">${quantity}</p>
+                        <p class="card-text" id="popular-quantity-price" value="${id}">${quantity}</p>
                         <a href="#!" id="${id}" value="${id}" class="btn btn-success">Agregar</a>
                     </div>
                 </div>
         `;
     } else {
       let cost = price - price * (offer / 100);
+      // <div id="text-offer-container" value="${id}">
+      //   <p class="card-offer" value="${id}">
+      //     ${offer}% dto.
+      //   </p>
+      // </div>; para las ofertas
       cardContainer.innerHTML += `
-        <div class="card" value="${id}">
-                    <div id="text-offer-container" value="${id}">            
-                      <p class="card-offer" value="${id}">${offer}% dto.</p>
-                    </div>
+        <div class="card" value="${id}">                    
                     <div id="img-card-popular">
                     <img src="${img}" class="card-img-top"
                         alt="offer" value="${id}" />
@@ -33,7 +35,7 @@ export const showPopular = async (array, cardContainer) => {
                     <div class="card-body" value="${id}">
                         <h5 class="card-title" value="${id}">$${cost}/kg <span>$${price}</span></h5>
                         <p class="card-text" value="${id}">${name}</p>
-                        <p class="card-text" value="${id}">${quantity}</p>
+                        <p class="card-text" id="popular-quantity-price" value="${id}">${quantity}</p>
                         <a href="#!" id="${id}" class="btn btn-success" value="${id}">Agregar</a>
                     </div>
                 </div>

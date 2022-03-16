@@ -199,13 +199,13 @@
         <div id="bg-thanks">
             <div id="modal-thanks">
                 <div id="img-thanks">
-                    <img src="" alt="">
+                    <img src="https://raw.githubusercontent.com/CarlinGebyte/AG-Sprint1/main/img/Hands%20Buying.png" alt="">
                 </div>
                 <div id="text-thanks">
                     <h4>¡Gracias por tu compra!</h4>
                 </div>
                 <div id="action-thanks">
-                    <button class="btn btn-success">Seguir comprando</button>
+                    <button class="btn btn-success" id="button-thanks">Seguir comprando</button>
                 </div>
             </div>
         </div>
@@ -271,10 +271,10 @@
                         <div id="card-number">
                             <label for="card-number-input">Información de la tarjeta</label>
                             <input type="text" class="form-control" id="card-number-input" maxlength="19"
-                                placeholder="xxxx xxxx xxxx xxxx">
+                                placeholder="xxxx xxxx xxxx xxxx" required>
                         </div>
                         <div id="expiration-card">
-                            <select name="month" class="form-control" id="month-card">
+                            <select name="month" class="form-control" id="month-card" required>
                                 <option value="" selected hidden>Mes</option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
@@ -290,7 +290,7 @@
                                 <option value="12">12</option>
                             </select>
                             <label for="">/</label>
-                            <select name="year" class="form-control" id="year-card">
+                            <select name="year" class="form-control" id="year-card" required>
                                 <option value="" selected hidden>Año</option>
                                 <option value="22">22</option>
                                 <option value="23">23</option>

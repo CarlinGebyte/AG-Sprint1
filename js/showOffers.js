@@ -6,7 +6,9 @@ export const showOffers = async (array, cardContainer) => {
     cost = cost.toFixed(1);
     cardContainer.innerHTML += `
         <div class="card" value="${id}">
-            <p class="card-offer" value="${id}">${offer}% dto.</p>
+            <div id="text-offer-container" value="${id}">            
+                <p class="card-offer" value="${id}">${offer}% dto.</p>
+            </div>
             <img src="${img}" value="${id}" class="card-img-top"
                 alt="offer" />
             <div class="card-body" value="${id}">

@@ -28,6 +28,7 @@ const locationCart = document.getElementById("location-cart-tittle");
 const paymentModal = document.getElementById("payment-bg");
 const closePayment1 = document.getElementById("bg-return");
 const closePayment2 = document.getElementById("return-text");
+const modalThanks = document.getElementById("bg-thanks");
 
 const endpoint = "https://ag-sprint1.herokuapp.com/";
 
@@ -53,8 +54,10 @@ const hideAlert = () => {
 };
 
 offerContainer.addEventListener("click", async (e) => {
-  modalDetail.style.display = "block";
   let id = e.target.getAttribute("value");
+  if (id === null) return;
+  modalDetail.style.display = "block";
+  console.log(id);
   let offer = await getProducts(`${endpoint}Offers/${id}`);
   await detailProduct(offer, `${endpoint}Offers`);
   const reduce = document.getElementById("reduce-quantity-btn");
@@ -82,8 +85,9 @@ offerContainer.addEventListener("click", async (e) => {
   });
 });
 popularContainer.addEventListener("click", async (e) => {
-  modalDetail.style.display = "block";
   let id = e.target.getAttribute("value");
+  if (id === null) return;
+  modalDetail.style.display = "block";
   let popular = await getProducts(`${endpoint}Popular/${id}`);
   await detailProduct(popular, `${endpoint}Offers`);
   const reduce = document.getElementById("reduce-quantity-btn");
@@ -192,11 +196,28 @@ locationLogo.addEventListener("click", showLocationModal);
 // END HEADER LOCATION
 
 // PAYMENT MODAL
+const btnPayment = document.getElementById("btn-payment-pay");
+const form = document.getElementById("form-payment");
+
+const hideThanks = () => {
+  modalThanks.style.display = "none";
+};
+const btnThanks = document.getElementById("button-thanks");
+btnThanks.addEventListener("click", () => {
+  hideThanks();
+});
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  paymentModal.style.display = "none";
+  modalCart.style.display = "none";
+  form.reset();
+  console.log('first')
+  modalThanks.style.display = "block";
+  window.setTimeout(hideThanks, 5000);
+});
 
 const closePayment = () => {
   paymentModal.style.display = "none";
-  const btnPayment = document.getElementById("btn-payment-pay");
-  const form = document.getElementById("form-payment");
   btnPayment.removeAttribute("disabled");
   btnPayment.setAttribute("disabled", "disabled");
   form.reset();

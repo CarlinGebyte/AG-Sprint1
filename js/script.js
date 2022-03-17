@@ -57,7 +57,7 @@ offerContainer.addEventListener("click", async (e) => {
   let id = e.target.getAttribute("value");
   if (id === null) return;
   modalDetail.style.display = "block";
-  console.log(id);
+  // console.log(id);
   let offer = await getProducts(`${endpoint}Offers/${id}`);
   await detailProduct(offer, `${endpoint}Offers`);
   const reduce = document.getElementById("reduce-quantity-btn");

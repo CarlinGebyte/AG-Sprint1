@@ -6,6 +6,10 @@ const offerToCart = (product, quantity) => {
     cost = price - price * (offer / 100);
     cost = cost.toFixed(1);
   }
+  quantity = Number(quantity);
+  console.log(quantity * cost);
+  console.log(cost)
+  // cost *= quantity;
   !isNaN(cost) ? (cost = `${cost}`) : (cost = price);
   let toAdd = {
     id,
@@ -47,7 +51,6 @@ export const popularToCart = (product, quantity) => {
   const { id, name, img, price } = product;
   let productsList = [];
   let cost = Number(price.slice(1, 3));
-  console.log(price.slice(1, 3));
   quantity = Number(quantity);
   let toAdd = {
     id,
@@ -101,6 +104,7 @@ export const showProductsCart = () => {
     cartOffers.forEach((offer) => {
       const { id, name, img, cost, quantity } = offer;
       total += Number(cost);
+      // 
       count += 1;
       cartItems.innerHTML += `
         <div class="product">
@@ -147,6 +151,7 @@ export const showProductsCart = () => {
     `;
     });
   }
+  total = total.toFixed(1);
   if (cartOffers != null || cartPopular != null) {
     cartItems.innerHTML += `
       <div id="cart-actions-end">
@@ -160,11 +165,10 @@ export const showProductsCart = () => {
         </div>
       </div>
     `;
-    localStorage.setItem('total', JSON.stringify(`${total}`))
+    localStorage.setItem("total", JSON.stringify(`${total}`));
     noProducts.style.display = "none";
   }
   modalCart.style.display = "block";
-  
 };
 
 export default offerToCart;

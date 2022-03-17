@@ -239,6 +239,7 @@ body {
 .modal-cart-bg .container-cart,
 .modal-location-bg .container-cart {
   position: absolute;
+  z-index: 1;
   display: flex;
   right: 0;
   top: 0;
@@ -543,6 +544,7 @@ body {
 
 #payment-bg {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
